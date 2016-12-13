@@ -1,61 +1,112 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Tic Tac Toe</title>
+      <title>Favorite Color</title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="/assets/styles/styles1.css">
+      <link rel="stylesheet" type="text/css" href="/assets/styles/reset.css">
 
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body class="container">
-      <h1>API Token Auth</h1>
+
+    <body>
+      <h1 class="title">What's Your Favorite Color
+        <img class="emoji" src="/assets/styles/images/not_amused.png" alt="not ammused">
+      </h1>
+      <p class="sub_header">A Pivot Project by: Adam Kadane</p>
+
       <hr>
       <div id='messages'>
         Not a message.
       </div>
       <hr>
-      <form id="sign-up">
+
+<div class="content_wrapper">
+
+  <div class="auth_box">
+    <div class="crud_form">
+      <form id="sign-up" class="crud_form">
         <fieldset>
-          <legend>Sign up!</legend>
+          <p class="form_title">Sign up!</p>
           <input type="text" name="credentials[email]" placeholder="E-Mail">
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
           <input type="submit" name="submit" value="Sign up!">
         </fieldset>
       </form>
+    </div>
 
-      <hr>
-
-      <form id="sign-in">
+    <div class="crud_form">
+      <form id="sign-in" class="crud_form">
         <fieldset>
-          <legend>Sign in!</legend>
+          <p class="form_title">Sign in!</p>
           <input type="text" name="credentials[email]" placeholder="E-Mail">
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="submit" name="submit" value="Sign in!">
         </fieldset>
       </form>
+    </div>
 
-      <hr>
-
-      <form id="change-password">
+    <div class="hidden-till-signin">
+      <div class="crud_form">
+        <form id="change-password" >
+          <fieldset>
+            <p class="form_title">Change Password</p>
+            <input type="password" name="passwords[old]" placeholder="Old Password">
+            <input type="password" name="passwords[new]" placeholder="New Password">
+            <input type="submit" name="submit" value="Change password!">
+          </fieldset>
+        </form>
+      </div>
+    <div class="crud_form">
+      <form id="sign-out" >
         <fieldset>
-          <legend>Change Password</legend>
-          <input type="password" name="passwords[old]" placeholder="Old Password">
-          <input type="password" name="passwords[new]" placeholder="New Password">
-          <input type="submit" name="submit" value="Change password!">
-        </fieldset>
-      </form>
-
-      <hr>
-
-      <form id="sign-out">
-        <fieldset>
-          <legend>Sign Out</legend>
+          <p class="form_title">Sign Out</p>
           <input type="submit" name="submit" value="Sign Out!">
         </fieldset>
       </form>
+    </div>
+  </div>
+</div>
 
-      <p>Accessing an authenticated API.</p>
+  <div class="crud_box">
+      <form id="post-color" class="crud_form">
+        <fieldset>
+          <p class="form_title">Post a Color</p>
+          <input type="text" name="credentials[email]" placeholder="Color">
+          <input type="submit" name="submit" value="Add Color">
+        </fieldset>
+      </form>
+
+      <form id="delete-color" class="crud_form">
+        <fieldset>
+          <p class="form_title">Delete Color</p>
+          <input type="text" name="credentials[email]" placeholder="Color">
+          <input type="submit" name="submit" value="Add Color">
+        </fieldset>
+      </form>
+
+      <form id="update-color" class="crud_form">
+        <fieldset>
+          <p class="form_title">Update Color</p>
+          <input type="text" name="credentials[email]" placeholder="Color">
+          <input type="submit" name="submit" value="Add Color">
+        </fieldset>
+      </form>
+    </div>
+
+    <aside class="color_list">
+      <form id="show-all-colors" class="crud_form">
+        <fieldset>
+          <p class="form_title">See All of Your Colors Color</p>
+          <input type="text" name="credentials[email]" placeholder="Color">
+          <input type="submit" name="submit" value="Add Color">
+        </fieldset>
+      </form>
+    </aside>
+
+</div>
     </body>
 </html>

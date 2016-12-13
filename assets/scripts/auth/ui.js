@@ -9,6 +9,7 @@ const success = (data) => {
 
 const signInSuccess = (data) => {
   store.user = data.user;
+  $('.hidden-till-signin').show();
   success(data);
 };
 
@@ -18,7 +19,7 @@ const signOutSuccess = () => {
 };
 
 const failure = (error) => {
-  $('#messages').text('fail');
+  // $('#messages').text('fail');
   console.error(error);
 };
 
