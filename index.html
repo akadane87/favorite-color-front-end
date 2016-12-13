@@ -42,9 +42,9 @@
       <form id="sign-in" class="crud_form">
         <fieldset>
           <p class="form_title">Sign in!</p>
-          <input type="text" name="credentials[email]" placeholder="E-Mail">
-          <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="submit" name="submit" value="Sign in!">
+          <input class="SignIn_email" type="text" name="credentials[email]" placeholder="E-Mail">
+          <input class="SignIn_password" type="password" name="credentials[password]" placeholder="Password">
+          <input class="SignIn-button" type="submit" name="submit" value="Sign in!">
         </fieldset>
       </form>
     </div>
@@ -95,17 +95,20 @@
           <input type="submit" name="submit" value="Add Color">
         </fieldset>
       </form>
+
+      <!-- <aside class="color_list"> -->
+        <form id="show-all-colors" class="crud_form">
+          <fieldset>
+            <p class="form_title">See All Colors</p>
+            <input type="text" name="credentials[email]" placeholder="Color">
+            <input type="submit" name="submit" value="Add Color">
+          </fieldset>
+        </form>
+      <!--</aside> -->
+
     </div>
 
-    <aside class="color_list">
-      <form id="show-all-colors" class="crud_form">
-        <fieldset>
-          <p class="form_title">See All of Your Colors Color</p>
-          <input type="text" name="credentials[email]" placeholder="Color">
-          <input type="submit" name="submit" value="Add Color">
-        </fieldset>
-      </form>
-    </aside>
+
 
 </div>
     </body>
