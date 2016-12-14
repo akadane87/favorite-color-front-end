@@ -1,7 +1,7 @@
 'use strict';
 
 const config = {
-  host:  "http://localhost:4741",
+  host:  "https://salty-brook-88442.herokuapp.com",
 };
 
 module.exports = config;
