@@ -8,7 +8,6 @@ const c_ui = require('./c_ui');
 const onPostColor = function (event) {
   event.preventDefault();
   let data = getFormFields(this);
-  console.log(data);
   c_api.postColor(data)
     .then(c_ui.postColorSuccess)
     .catch(c_ui.failure);

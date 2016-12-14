@@ -4,7 +4,6 @@ const store = require('../store');
 
 const success = (data) => {
   $('#messages').text('success');
-  console.log(data);
 };
 
 const signInSuccess = (data) => {
@@ -24,8 +23,6 @@ const signOutSuccess = () => {
 };
 
 const failure = (error) => {
-  // $('#messages').text('fail');
-  console.error(error);
 };
 
 module.exports = {
