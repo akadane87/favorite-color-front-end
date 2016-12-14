@@ -23,18 +23,17 @@ const postColor = (data) =>
         },
     });
 
-  // const deleteColor = (data) =>
-  //   $.ajax({
-  //       url: config.host + '/colors',
-  //       method: 'DELETE',
-  //       data,
-  //       headers: {
-  //         Authorization: 'Token token=' + store.user.token,
-  //       },
-  //   });
+  const deleteColor = (id) =>
+    $.ajax({
+        url: config.host + '/colors/' + id,
+        method: 'DELETE',
+        headers: {
+          Authorization: 'Token token=' + store.user.token,
+        },
+    });
 
 module.exports = {
   postColor,
-  // deleteColor,
+  deleteColor,
   getAllColors,
 };

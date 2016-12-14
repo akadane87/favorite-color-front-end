@@ -16,9 +16,11 @@ const getAllColorsSuccess = (data) => {
   $('.color_list').html(listColorTemplates(data));
 };
 
-// const deleteColorSuccess = (data) => {
-//   console.log(data);
-// };
+const deleteColorSuccess = (id) => {
+  let deletedColor = $('#color-' + id);
+  deletedColor.remove();
+  console.log("delete color success");
+};
 
 const failure = (error) => {
   console.log(error);
@@ -26,7 +28,7 @@ const failure = (error) => {
 
 module.exports = {
   postColorSuccess,
-  // deleteColorSuccess,
+  deleteColorSuccess,
   getAllColorsSuccess,
   success,
   failure

@@ -1,8 +1,17 @@
 {{#each this}}
-
-<div class="color_list_box">
+{{#if this}}
+<div id='color-{{id}}' class="color_list_box">
   <p>{{id}} - {{favorite}}</p>
-  <button class="delete_color" formtarget=""name="subject" type="submit" value="HTML" data-id="{{id}}">DELETE</button>
+  <button data-id='{{id}}' class="delete_color" formtarget=""name="subject" type="submit" value="HTML" data-id="{{id}}">DELETE</button>
+  <form class="update-color" class="crud_form">
+    <fieldset>
+      <p class="form_title">Update Color</p>
+      <input type="text" name="color[favorite]" placeholder="Color">
+      <input type="submit">
+    </fieldset>
+  </form>
+  <br>
+  <br>
 </div>
-
+{{/if}}
 {{/each}}

@@ -51,6 +51,9 @@ input {
 }
 
 .color_list {
-  float: right;
   position: relative;
+}
+
+.color_list_box {
+  float: left;
 }
