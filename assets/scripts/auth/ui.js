@@ -12,6 +12,7 @@ const signInSuccess = (data) => {
   $('.hidden-till-signin').show();
   $('.crud_box').show();
   success(data);
+  $('#sign-in').trigger('reset');
 };
 
 const signOutSuccess = () => {
