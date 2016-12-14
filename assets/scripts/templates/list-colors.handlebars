@@ -6,7 +6,7 @@
   <form data-id='{{id}}' class="update-color" class="crud_form">
     <fieldset>
       <p class="form_title">Update Color</p>
-      <input type="text" name="color[favorite]" placeholder="Color">
+      <input type="text" name="color[favorite]" required="required" placeholder="Color" pattern="[a-zA-Z]+">
       <input type="submit">
     </fieldset>
   </form>
