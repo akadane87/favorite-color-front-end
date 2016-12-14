@@ -32,12 +32,24 @@ const onDeleteColor = function (e) {
     .catch(c_ui.failure);
 };
 
+const onUpdateColor = function (e) {
+  e.preventDefault();
+  let data = getFormFields(this);
+  let colorId = $(this).attr('data-id');
+  c_api.updateColor(colorId, data)
+    .then(() => {
+      c_ui.updateColorSuccess(colorId, data)
+    })
+    .catch(c_ui.failure);
+};
+
 const addHandlers = () => {
   $('#post-color').on('submit', onPostColor);
   $('#show-all-colors').on('submit', onGetAllColors);
   // $('#delete-color').on('submit', onDeleteColor);
   //note class >> .delete-color generated in handlebars
   $('body').on('click', '.delete_color', onDeleteColor);
+  $('body').on('submit', '.update-color', onUpdateColor);
 };
 
 

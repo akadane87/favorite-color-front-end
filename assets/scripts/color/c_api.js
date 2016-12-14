@@ -32,8 +32,19 @@ const postColor = (data) =>
         },
     });
 
+    const updateColor = (id, data) =>
+      $.ajax({
+          url: config.host + '/colors/' + id,
+          method: 'PATCH',
+          data,
+          headers: {
+            Authorization: 'Token token=' + store.user.token,
+          },
+      });
+
 module.exports = {
   postColor,
   deleteColor,
   getAllColors,
+  updateColor,
 };

@@ -18,6 +18,7 @@ const signOutSuccess = () => {
     success(store.user);
     $('.hidden-till-signin').hide();
     $('.crud_box').hide();
+    $('.color_list').hide();
     store.user = null;
 };
 
